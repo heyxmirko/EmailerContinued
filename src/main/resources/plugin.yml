@@ -1,0 +1,17 @@
+name: EmailerContinued
+version: '${project.version}'
+main: me.lukyn76.emailer.spigot.Emailer
+api-version: '1.20'
+description: Send real emails to your players.
+softdepend: [PlaceholderAPI]
+author: lukyn76
+commands:
+ emailer:
+  description: The main command for the emailer plugin. Contains admin commands mostly.
+ setemail:
+  description: Sends a verification code to the player's email.
+ verifyemail:
+  aliases: [emailverify]
+  description: Checks the verification code sent with the one typed.
+ unsubscribe:
+  description: Unsubscribes a player from any emails.
