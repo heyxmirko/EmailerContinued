@@ -34,7 +34,13 @@ public class VerifyCommand extends SpigotCommand {
     	
 		// The code given by the player
 		String code = args[0];
-		
+
+		// Check if the player has a pending verification requst
+		if (!plugin.getPending().containsKey(player)) {
+        	player.sendMessage(plugin.getMessage("commands.verify.noEmail"));
+        	return;
+    	}
+	
 		// The data of the pending request
     	String[] data = plugin.getPending().get(player).split(";;");
 		String realCode = data[0];
